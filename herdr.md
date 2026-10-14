@@ -22,6 +22,14 @@ The configuration mirrors the tmux layout model:
 - `prefix+;`: last pane.
 - `Ctrl-Alt` plus an arrow focuses a neighboring pane.
 - `Ctrl-Alt-Shift` plus an arrow resizes a pane.
+- `Ctrl-Space`, then `Shift-h/j/l`, swaps the current pane left/down/right.
+  `Ctrl-Space`, then `Shift-Up`, swaps it up.
+  Prefix bindings are used because terminals can collapse `Ctrl-Shift-letter`
+  into the same input as `Ctrl-letter`.
+- Herdr currently has no layout-cycle command equivalent to tmux's
+  `prefix+space`; splits can be created horizontally with `prefix+h` or
+  vertically with `prefix+v`, but an existing split tree cannot be rotated by
+  a built-in keybinding.
 - `prefix+c/r/k` creates, renames, and closes tabs.
 - `prefix+1..9` or `Alt-1..9` switches tabs.
 - `prefix+Shift-c/r/k` creates, renames, and closes workspaces.

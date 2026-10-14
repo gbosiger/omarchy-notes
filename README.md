@@ -22,6 +22,7 @@ When applying these notes on a new machine:
 Restore these items from their documented sources:
 
 - Neovim: `nvim.md`
+- Flea file manager: `flea.md`
 - tmux: `tmux.md`
 - Herdr and cross-pane navigation: `herdr.md`
 - Shell and terminal appearance: `~/.bashrc`, `~/.bash_profile`, `~/.config/ghostty/config`, `~/.config/foot/foot.ini`, and `~/.config/starship.toml`
@@ -33,6 +34,10 @@ The important behavior is the shared `Ctrl-h/j/k/l` navigation:
 - tmux forwards the keys to Vim/Neovim and otherwise changes tmux panes.
 - Neovim changes its own splits first and crosses to the outer pane at an edge.
 - Herdr uses `herdr-smart-nav` to forward keys to Neovim or focus a Herdr pane.
+
+Herdr maps `Ctrl-Space`, then `Shift-h/j/l`, to swap the current pane
+left/down/right, and `Ctrl-Space`, then `Shift-Up`, to swap it up. Herdr currently has no built-in equivalent of tmux's
+`prefix+space` layout cycling.
 
 ## Optional Omarchy Overrides
 
